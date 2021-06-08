@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run the action
-      uses: PennSIVE/r2py@0.2.1
+      uses: PennSIVE/r2py@0.2.2
       with:
         username: ${{ github.actor }}
         repo: ${{ github.event.repository.name }} 
