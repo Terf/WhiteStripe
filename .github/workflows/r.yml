@@ -1,0 +1,19 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run the action
+      uses: PennSIVE/r2py@0.2.1
+      with:
+        username: ${{ github.actor }}
+        repo: ${{ github.event.repository.name }} 
+        email: "tim.terf@gmail.com"
+        pat: ${{ secrets.GH_PAT }}
+        
